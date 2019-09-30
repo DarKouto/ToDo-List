@@ -28,19 +28,19 @@ h1 {
 }
 
 input {
-    border: 3px solid rgba(0, 0, 0, 0); /* invisible 3px border to match the :focus border */
+    border: 3px solid rgba(0, 0, 0, 0); /* invisible 3px border to match the input:focus border */
     color: #2980e9;
     font-size: 18px;
     background: #f7f7f7;
     width: 100%;
     padding: 13px 13px 13px 20px; /* top right bottom left */
-    box-sizing: border-box; /* keeps everything inside the parent element even if the padding and the width is bigger */
+    box-sizing: border-box; /* keeps everything inside the parent element */
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     display:none;
 }
 
-input:focus { /* only selects the input when it is focused AKA "has the cursor on" aka "IS ACTIVE" */
+input:focus { /* only selects the input when it is focused */
     background: #fff;
     border: 3px solid #2980e9;
     outline: none;
@@ -76,10 +76,10 @@ span {
     text-align: center;
     display: inline-block;
     width: 0;
-    opacity: 0; /* so it doesn't show, even if it's slightly */
+    opacity: 0; /* even with width: 0 the icon was showing (slightly), this makes it invisible */
 }
 
-li:hover span { /* when there is hover on the li, the SPAN is selected */
+li:hover span { /* when the user hovers on the li, the SPAN is selected */
     width: 40px;
     transition: 0.2s linear;
     opacity: 1;
